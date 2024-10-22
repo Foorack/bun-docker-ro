@@ -1,0 +1,7 @@
+services:
+  frontend:
+    image: docker.io/oven/bun:1.1.32
+    volumes:
+      - ./:/home/bun/app:ro
+    command: /bin/sh -c "bun install && bun run dev"
+    restart: always
